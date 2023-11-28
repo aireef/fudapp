@@ -1,2 +1,2 @@
-# fudapp
+# First Simple Food App Project
  
