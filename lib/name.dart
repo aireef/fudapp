@@ -18,12 +18,18 @@ class _InNameState extends State<InName> {
     return Scaffold(
      
        body: SafeArea(
+        
       
-      child: Column(
+      child: 
+      SingleChildScrollView(
+
+       child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget> [
 
-
+        SizedBox(
+          height: 270,
+        ),
         Center(
           
           child: Text("What is your name?",
@@ -34,13 +40,15 @@ class _InNameState extends State<InName> {
       ),
 
       SizedBox(
-        height: 10,
+        height: 30,
       ),
 
-        Center(
-          child:  
-          SizedBox(
-            width: 240,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              
+              SizedBox(
+            width: 160,
             
 
             child:  TextField(
@@ -51,12 +59,39 @@ class _InNameState extends State<InName> {
               
             ),
             ),
+          ),
+          SizedBox(width: 10,),
+
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.white,
+              onPrimary: Colors.black,
+              
+              elevation: 3,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32.0)),
+                  side: BorderSide(color: Colors.orange),
+              minimumSize: Size(100, 30), //////// HERE
+            ),
+            onPressed: () {
+              showDialog(context: context, builder: (context){
+                return AlertDialog(
+                  content: Text("Your name is ${_name.text}"),
+                );
+              });
+            },
+            child: Text('check'),
+          ),
+
+          SizedBox()
+            ],
           )
           
-        ),
+          
+        ,
 
       SizedBox(
-        height: 10,
+        height: 30,
       ),
        
        Container(
@@ -113,6 +148,8 @@ class _InNameState extends State<InName> {
                  
       ]
     )
+      )
+      
     ),
     );
   }

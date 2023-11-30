@@ -111,13 +111,13 @@ class HomeScreen extends StatelessWidget {
                         child: ElevatedButton(onPressed: (){}, 
                         child: 
                         
-                        Expanded(child: 
+                       
                         Text("Top Up",
                         style: TextStyle(
                           color: Colors.black
                         ))
                         
-                        )
+                        
                         ,
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -289,7 +289,7 @@ class HomeScreen extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget> [
-              Expanded(child: 
+              
               Container(
                 padding: EdgeInsets.all(4),
                 width: 200,
@@ -402,9 +402,9 @@ class HomeScreen extends StatelessWidget {
                   
                 ),
               )
-              )
+              
               ,
-              Expanded(child: 
+              
               Container(
                 padding: EdgeInsets.all(4),
                 width: 200,
@@ -517,9 +517,9 @@ class HomeScreen extends StatelessWidget {
                   
                 ),
               )
-              )
+              
               ,
-              Expanded(child: 
+             
               Container(
                 padding: EdgeInsets.all(4),
                 width: 200,
@@ -632,7 +632,7 @@ class HomeScreen extends StatelessWidget {
                   
                 ),
               )
-              )
+              
               ,
               
 
