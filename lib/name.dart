@@ -9,7 +9,8 @@ class InName extends StatefulWidget {
 }
 
 class _InNameState extends State<InName> {
- TextEditingController _name = new TextEditingController();
+//  TextEditingController _name = new TextEditingController();
+String _name = '';
   
 
 @override
@@ -52,12 +53,17 @@ class _InNameState extends State<InName> {
             
 
             child:  TextField(
-              controller: _name,
+              
               decoration: 
             InputDecoration(
               hintText: "Write your name",
               
             ),
+            onChanged: (String value){
+              setState(() {
+                _name = value;
+              });
+            },
             ),
           ),
           SizedBox(width: 10,),
@@ -76,7 +82,7 @@ class _InNameState extends State<InName> {
             onPressed: () {
               showDialog(context: context, builder: (context){
                 return AlertDialog(
-                  content: Text("Your name is ${_name.text}"),
+                  content: Text("Your name is $_name"),
                 );
               });
             },
@@ -133,7 +139,7 @@ class _InNameState extends State<InName> {
               minimumSize: Size(120, 30), //////// HERE
             ),
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomeScreen(name: _name.text)));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomeScreen(name: _name)));
             },
             child: Text('Continue'),
           ),

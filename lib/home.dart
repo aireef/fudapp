@@ -240,12 +240,12 @@ class HomeScreen extends StatelessWidget {
                         
                         child: ElevatedButton(onPressed: (){}, 
                         child:
-                         Expanded(child:
+                        
                          Text("Buy",
                         style: TextStyle(
                           color: Colors.black
                         )) 
-                         )
+                         
                          ,
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
